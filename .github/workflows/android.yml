@@ -16,7 +16,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
 
       - uses: actions/setup-java@v4
         with:
@@ -36,7 +35,7 @@ jobs:
         with:
           targets: aarch64-linux-android,armv7-linux-androideabi,x86_64-linux-android
 
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
 
       - run: pnpm tauri android init --ci
 
