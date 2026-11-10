@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: Minireel/HGhub
+          repository: zxsos/HGhub
           ref: main
 
       - uses: pnpm/action-setup@v4
